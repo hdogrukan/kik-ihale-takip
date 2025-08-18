@@ -1,0 +1,52 @@
+name: EKAP İhale Tara
+
+on:
+  # Her gün sabah 05:00 UTC (Türkiye saati ile 08:00) de çalıştır.
+  # Cron zamanlayıcıyı https://crontab.guru/ adresinden ayarlayabilirsiniz.
+  schedule:
+    - cron: '0 5 * * *'
+  
+  # Manuel olarak da çalıştırabilmek için workflow_dispatch ekliyoruz.
+  workflow_dispatch:
+permissions:
+  contents: write         # GITHUB_TOKEN ile push izni verir
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Adım: Repoyu sanal makineye klonla
+      - name: Kodu Klonla
+        uses: actions/checkout@v3
+
+      # 2. Adım: Python'ı kur
+      - name: Python 3.11 Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      # 3. Adım: Gerekli Python kütüphanelerini kur
+      - name: Kütüphaneleri Kur
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      # 4. Adım: Playwright tarayıcılarını kur
+      - name: Playwright Tarayıcılarını Kur
+        run: python -m playwright install --with-deps
+        
+      # 5. Adım: Python betiğini çalıştır
+      - name: İhale Tara ve Veritabanını Güncelle
+        run: python main.py
+
+      # 6. Adım: Güncellenen veritabanı dosyasını repoya geri commit'le
+      - name: Git ayarları ve push
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add hal_fiyatlari.db
+          git commit -m "Veritabanı güncellendi: $(date '+%Y-%m-%d')" || echo "Değişiklik yok"
+          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
