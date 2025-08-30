@@ -14,6 +14,8 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Istanbul
     
     steps:
       # 1. Adım: Repoyu sanal makineye klonla
@@ -48,5 +50,9 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add ihaleler.db
-          git commit -m "Veritabanı güncellendi: $(date '+%Y-%m-%d %H:%M:%S')" --allow-empty
-          git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
+          if ! git diff --quiet -- ihaleler.db; then
+            git commit -m "Veritabanı güncellendi: $(date '+%Y-%m-%d %H:%M:%S')"
+            git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
+          else
+            echo "ihaleler.db değişmedi; commit atlanıyor."
+          fi
