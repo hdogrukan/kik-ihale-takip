@@ -50,9 +50,12 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add ihaleler.db
-          if ! git diff --quiet -- ihaleler.db; then
+          # 'git add' sonrası çalışma alanı ve index eşitlendiğinden,
+          # değişiklik algılamak için '--cached' (staged) diff kullan.
+          if ! git diff --cached --quiet -- ihaleler.db; then
             git commit -m "Veritabanı güncellendi: $(date '+%Y-%m-%d %H:%M:%S')"
-            git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:main
+            # Mevcut çalışılan dala push et (main yerine dinamik dal adı)
+            git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }} HEAD:${GITHUB_REF_NAME}
           else
             echo "ihaleler.db değişmedi; commit atlanıyor."
           fi
