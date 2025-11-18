@@ -1,6 +1,6 @@
-# KİK EKAP İhale Takip ve Kayıt Aracı
+# KAMU İHALE KURUMU(KİK) EKAP İhale Takip ve Kayıt Aracı
 
-Bu proje, **Kamu İhale Kurumu (EKAP)** üzerinden günlük olarak ihale ilanlarını tarayıp, yeni bulunan ihaleleri bir **SQLite veritabanına (`ihaleler.db`)** kaydeden basit ama otomatik çalışan bir araçtır.  
+Bu proje, **Kamu İhale Kurumu (KİK)** üzerinden günlük olarak ihale ilanlarını tarayıp, yeni bulunan ihaleleri bir **SQLite veritabanına (`ihaleler.db`)** kaydeden basit ama otomatik çalışan bir araçtır.  
 GitHub Actions üzerinden zamanlanmış şekilde çalışarak veritabanını düzenli olarak günceller.
 
 ---
