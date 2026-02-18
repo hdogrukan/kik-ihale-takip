@@ -189,7 +189,7 @@ def scrape_and_update_db(yil, alim_turleri, ihale_durumu_listesi):
 if __name__ == "__main__":
     setup_database()
     
-    aranacak_yil = "2025"
+    aranacak_yil = "2026"
     aranacak_alim_turleri = ["Hizmet","Mal","Danışmanlık","Yapım"]
     aranacak_ihale_durumlari = ["Teklif Vermeye Açık"]
 
