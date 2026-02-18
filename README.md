@@ -1,7 +1,7 @@
 # KAMU İHALE KURUMU(KİK) EKAP İhale Takip ve Kayıt Aracı
 
 Bu proje, **Kamu İhale Kurumu (KİK)** üzerinden günlük olarak ihale ilanlarını tarayıp, yeni bulunan ihaleleri bir **SQLite veritabanına (`ihaleler.db`)** kaydeden basit ama otomatik çalışan bir araçtır.  
-GitHub Actions üzerinden zamanlanmış şekilde çalışarak veritabanını düzenli olarak günceller.
+Linux sunucuda zamanlanmış şekilde çalışıp veritabanı değiştiğinde GitHub reposuna commit/push eder.
 
 ---
 
@@ -19,9 +19,8 @@ GitHub Actions üzerinden zamanlanmış şekilde çalışarak veritabanını dü
   - `etiketler` (liste olarak, veritabanında JSON string)
 - Daha önce kaydedilmiş `ikn` değerlerine sahip ihaleleri **atlar**, sadece yeni kayıtları ekler.
 - Veriler yerel bir **SQLite veritabanında** tutulur (`ihaleler.db`).
-- GitHub Actions üzerinden otomatik olarak:
-  - Betiği çalıştırır,
-  - Değişen `ihaleler.db` dosyasını repoya commit/push eder.
+- Linux sunucuda `cron` ile otomatik çalıştırmaya uygundur.
+- Değişen `ihaleler.db` dosyasını commit/push etmek için hazır script içerir.
 
 ---
 
@@ -37,8 +36,8 @@ GitHub Actions üzerinden zamanlanmış şekilde çalışarak veritabanını dü
   Çalışma sırasında otomatik oluşturulan **SQLite veritabanı** dosyası.  
   İlk çalıştırmada yoksa otomatik oluşturulur.
 
-- `.github/workflows/scrape.yml`  
-  GitHub Actions üzerinde betiğin her gün otomatik çalışmasını sağlayan workflow dosyası.
+- `run_scrape_and_push.sh`  
+  Betiği çalıştırır, `ihaleler.db` değiştiyse commit atar ve GitHub'a push eder.
 
 ---
 
@@ -48,7 +47,8 @@ GitHub Actions üzerinden zamanlanmış şekilde çalışarak veritabanını dü
 - **Playwright for Python**
   - Chromium tarayıcısını headless (görünmez) modda kullanır.
 - **SQLite** (`sqlite3` standart kütüphanesi)
-- **GitHub Actions** (otomatik zamanlanmış çalıştırma için)
+- **Cron** (Linux sunucuda zamanlanmış çalıştırma için)
+- **Git** (değişen `ihaleler.db` dosyasını commit/push etmek için)
 
 ---
 
@@ -133,7 +133,7 @@ python main.py
 if __name__ == "__main__":
     setup_database()
     
-    aranacak_yil = "2025"
+    aranacak_yil = time.strftime("%Y")
     aranacak_alim_turleri = ["Hizmet","Mal","Danışmanlık","Yapım"]
     aranacak_ihale_durumlari = ["Teklif Vermeye Açık"]
 
@@ -196,30 +196,55 @@ bloğu, betiğin çalıştırıldığında hangi filtrelerle tarama yapacağın�
 
 ---
 
-## GitHub Actions ile Otomatik Çalıştırma
+## Linux Sunucuda Otomatik Çalıştırma (22:00)
 
-`.github/workflows/scrape.yml` dosyası, bu betiğin GitHub üzerinde otomatik çalışmasını sağlar.
+Bu projede GitHub Actions yerine Linux sunucuda `cron` kullanabilirsiniz.
 
-Önemli noktalar:
+### 1. Sunucu hazırlığı
 
-- **Zamanlama**
-  - `schedule` altında `cron: '0 5 * * *'` tanımlıdır.
-  - Bu, her gün **05:00 UTC** (Türkiye saatiyle yaklaşık **08:00**) çalışacağı anlamına gelir.
-  - Ayrıca `workflow_dispatch` ile manuel tetikleme de mümkündür.
+```bash
+git clone <repo-url>
+cd kik-ihale-takip
 
-- **Adımlar**
-  1. Reponun klonlanması (`actions/checkout@v3`)
-  2. Python 3.11 kurulumu (`actions/setup-python@v4`)
-  3. Python bağımlılıklarının kurulması (`pip install -r requirements.txt`)
-  4. Playwright tarayıcılarının kurulması (`python -m playwright install --with-deps`)
-  5. `python main.py` komutuyla betiğin çalıştırılması
-  6. `ihaleler.db` dosyasında değişiklik varsa:
-     - `git add ihaleler.db`
-     - Zaman damgalı bir commit mesajı ile commit
-     - `GITHUB_TOKEN` kullanılarak ilgili dala push
-     - Değişiklik yoksa commit atlanır.
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+python -m playwright install --with-deps
+```
 
-Bu sayede veritabanı dosyası repoda her gün otomatik olarak güncellenmiş olur.
+### 2. GitHub push yetkisi
+
+Sunucuda repoya push atabilmek için SSH anahtarını veya PAT erişimini ayarlayın.  
+SSH ile kontrol için:
+
+```bash
+ssh -T git@github.com
+```
+
+### 3. Scripti test et
+
+```bash
+./run_scrape_and_push.sh
+```
+
+Bu script:
+
+1. `python main.py` çalıştırır.
+2. `ihaleler.db` değiştiyse commit atar.
+3. Aktif branche `origin` üzerinden push eder.
+
+### 4. Her gün 22:00'de çalıştırma (cron)
+
+`crontab -e` ile aşağıdaki satırları ekleyin:
+
+```cron
+CRON_TZ=Europe/Istanbul
+0 22 * * * cd /path/to/kik-ihale-takip && ./run_scrape_and_push.sh >> /var/log/kik-ihale.log 2>&1
+```
+
+- `CRON_TZ=Europe/Istanbul` satırı, cron saatini Türkiye saatine sabitler.
+- Log dosyasını (`/var/log/kik-ihale.log`) ihtiyacınıza göre değiştirebilirsiniz.
 
 ---
 
@@ -270,4 +295,3 @@ sqlite> SELECT ikn, ihale_adi, tarih FROM ihaleler ORDER BY kayit_tarihi DESC LI
 
 - Hatalar, öneriler veya yeni özellik fikirleri için issue açabilir veya pull request gönderebilirsiniz.
 - Otomatik testler veya ek loglama ihtiyaçlarınıza göre `main.py` içine ek çıktılar veya istatistikler ekleyebilirsiniz.
-

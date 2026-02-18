@@ -52,7 +52,7 @@ def scrape_and_update_db(yil, alim_turleri, ihale_durumu_listesi):
     existing_ikns = get_existing_ikns()
     
     with sync_playwright() as p:
-        # GitHub Actions ve tutarlı seçimler için Türkçe yerel ayar zorla
+        # Sunucu/yerel ortam fark etmeksizin tutarlı seçimler için Türkçe yerel ayar zorla
         browser = p.chromium.launch(headless=True, slow_mo=50)
         context = browser.new_context(
             locale="tr-TR",
@@ -171,7 +171,7 @@ def scrape_and_update_db(yil, alim_turleri, ihale_durumu_listesi):
             else:
                 print("Yeni ihale bulunamadı.")
             
-            # GITHUB ACTIONS İÇİN DEĞİŞİKLİK: input satırını kaldırıyoruz.
+            # Etkileşimsiz (headless) çalışma için input beklenmiyor.
 
         except TimeoutError as e:
             print(f"Zaman aşımı hatası: {e}")
@@ -189,7 +189,7 @@ def scrape_and_update_db(yil, alim_turleri, ihale_durumu_listesi):
 if __name__ == "__main__":
     setup_database()
     
-    aranacak_yil = "2026"
+    aranacak_yil = time.strftime("%Y")
     aranacak_alim_turleri = ["Hizmet","Mal","Danışmanlık","Yapım"]
     aranacak_ihale_durumlari = ["Teklif Vermeye Açık"]
 
