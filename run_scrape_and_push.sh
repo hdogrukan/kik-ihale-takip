@@ -11,9 +11,21 @@ if [[ -f ".venv/bin/activate" ]]; then
 elif [[ -f "venv/bin/activate" ]]; then
   # shellcheck disable=SC1091
   source "venv/bin/activate"
+elif [[ -f "../.venv/bin/activate" ]]; then
+  # shellcheck disable=SC1091
+  source "../.venv/bin/activate"
 fi
 
-python main.py
+if command -v python >/dev/null 2>&1; then
+  PYTHON_BIN="python"
+elif command -v python3 >/dev/null 2>&1; then
+  PYTHON_BIN="python3"
+else
+  echo "Hata: python veya python3 bulunamadi." >&2
+  exit 1
+fi
+
+"$PYTHON_BIN" main.py
 
 git add -- ihaleler.db
 
