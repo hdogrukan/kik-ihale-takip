@@ -5,6 +5,18 @@ import sqlite3
 from playwright.sync_api import sync_playwright, TimeoutError
 
 DB_FILE = "ihaleler.db"
+EMPTY_STATE_KEYWORDS = (
+    "sonuç bulunamadı",
+    "kayıt bulunamadı",
+    "ihale bulunamadı",
+    "gösterilecek kayıt yok",
+)
+BLOCK_STATE_KEYWORDS = (
+    "captcha",
+    "too many requests",
+    "erişim engellendi",
+    "güvenlik doğrulaması",
+)
 
 def setup_database():
     # ... (değişiklik yok)
@@ -47,6 +59,55 @@ def insert_new_tenders(tenders_list):
     after = cursor.execute("SELECT COUNT(*) FROM ihaleler").fetchone()[0]
     conn.close()
     print(f"DB satır sayısı: önce={before}, sonra={after}, eklenen={after-before}")
+
+def get_body_preview(page, max_len=320):
+    try:
+        body_text = page.locator("body").inner_text(timeout=5000)
+        normalized = re.sub(r"\s+", " ", body_text).strip()
+        return normalized[:max_len]
+    except Exception:
+        return ""
+
+def wait_for_tender_cards(page, current_page, max_attempts=3):
+    last_error = None
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            page.wait_for_selector("div.pc-card", timeout=45000)
+            ilanlar = page.locator("div.pc-card").all()
+            if ilanlar:
+                return ilanlar
+        except TimeoutError as err:
+            last_error = err
+
+        body_preview = get_body_preview(page)
+        lowered_preview = body_preview.casefold()
+
+        if any(keyword in lowered_preview for keyword in EMPTY_STATE_KEYWORDS):
+            print(f"Sayfa {current_page}: boş sonuç mesajı algılandı, kart bulunamadı.")
+            return []
+
+        if any(keyword in lowered_preview for keyword in BLOCK_STATE_KEYWORDS):
+            raise RuntimeError(
+                f"Sayfa {current_page}: engelleme/doğrulama ekranı algılandı. "
+                f"Özet: {body_preview or 'metin alınamadı'}"
+            )
+
+        if attempt < max_attempts:
+            print(
+                f"Sayfa {current_page}: ilan kartları {attempt}. denemede yüklenmedi, "
+                "yeniden deneniyor..."
+            )
+            try:
+                page.wait_for_load_state("networkidle", timeout=30000)
+            except TimeoutError:
+                pass
+            page.wait_for_timeout(2500 * attempt)
+
+    raise RuntimeError(
+        f"Sayfa {current_page}: {max_attempts} denemede ilan kartları yüklenemedi. "
+        f"Son hata: {last_error}. Özet: {get_body_preview(page) or 'metin alınamadı'}"
+    )
 
 def scrape_and_update_db(yil, alim_turleri, ihale_durumu_listesi):
     existing_ikns = get_existing_ikns()
@@ -102,7 +163,14 @@ def scrape_and_update_db(yil, alim_turleri, ihale_durumu_listesi):
 
             page.locator('dx-select-box[title="Gösterilecek Kayıt Sayısı"]').click()
             page.locator(".dx-list-item-content:text-is('50')").click()
-            page.wait_for_selector("div.pc-card", timeout=30000)
+            try:
+                ilk_sayfa_ilanlari = wait_for_tender_cards(page, current_page=1)
+            except RuntimeError as err:
+                print(f"İlk sayfa yüklenemedi: {err}")
+                return
+            if not ilk_sayfa_ilanlari:
+                print("Filtrelere uygun ilan bulunamadı; tarama sonlandırıldı.")
+                return
             print("Sayfa başına 50 kayıt ile liste güncellendi.")
 
             # Sayfa bilgisinden toplam sayfa sayısını doğru çöz
@@ -123,8 +191,23 @@ def scrape_and_update_db(yil, alim_turleri, ihale_durumu_listesi):
             for current_page in range(1, total_pages + 1):
                 
                 print(f"\n--- Sayfa {current_page}/{total_pages} taranıyor... ---")
-                page.wait_for_selector("div.pc-card")
-                ilanlar = page.locator("div.pc-card").all()
+                if current_page == 1:
+                    ilanlar = ilk_sayfa_ilanlari
+                else:
+                    try:
+                        ilanlar = wait_for_tender_cards(page, current_page=current_page)
+                    except RuntimeError as err:
+                        print(err)
+                        print(
+                            "Sayfalama erken sonlandırılıyor; o ana kadarki yeni kayıtlar kaydedilecek."
+                        )
+                        break
+                    if not ilanlar:
+                        print(
+                            f"Sayfa {current_page}: ilan kartı bulunamadı, "
+                            "sayfalama erken sonlandırılıyor."
+                        )
+                        break
                 
                 page_new_count = 0
                 for ilan in ilanlar:
@@ -159,7 +242,9 @@ def scrape_and_update_db(yil, alim_turleri, ihale_durumu_listesi):
                     if next_page_button.is_enabled():
                         print("Sonraki sayfaya geçiliyor...")
                         next_page_button.click()
-                        page.locator(f'dx-number-box input[aria-valuenow="{current_page + 1}"]').wait_for()
+                        page.locator(
+                            f'dx-number-box input[aria-valuenow="{current_page + 1}"]'
+                        ).wait_for(timeout=45000)
                     else:
                         break
                 print(f"Sayfa {current_page} tarandı. Yeni eklenen (bu sayfada): {page_new_count}")

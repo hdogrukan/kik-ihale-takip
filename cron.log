@@ -1,3 +1,687 @@
 /home/hd/Desktop/local_llm/kik-ihale-takip/run_scrape_and_push.sh: line 16: python: command not found
 /home/hd/Desktop/local_llm/kik-ihale-takip/run_scrape_and_push.sh: line 16: python: command not found
 /home/hd/Desktop/local_llm/kik-ihale-takip/run_scrape_and_push.sh: line 16: python: command not found
+'ihaleler.db' veritabanı hazır.
+Veritabanında 31082 mevcut kayıt bulundu.
+Sayfa açılıyor...
+Sayfa başarıyla açıldı.
+
+--- Filtreler Uygulanıyor ---
+Alım Türleri seçildi: Hizmet, Mal, Danışmanlık, Yapım
+
+--- İhale Durumu Seçiliyor ---
+
+Ana 'Filtrele' butonuna basılıyor...
+Sonuçlar yüklendi.
+Sayfa başına 50 kayıt ile liste güncellendi.
+Toplam 62 sayfa bulundu (metin: '/ 62 Sayfa').
+
+--- Sayfa 1/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 1 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 2/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 2 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 3/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 3 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 4/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 4 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 5/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 5 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 6/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 6 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 7/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 7 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 8/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 8 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 9/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 9 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 10/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 10 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 11/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 11 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 12/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 12 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 13/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 13 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 14/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 14 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 15/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 15 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 16/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 16 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 17/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 17 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 18/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 18 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 19/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 19 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 20/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 20 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 21/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 21 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 22/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 22 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 23/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 23 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 24/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 24 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 25/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 25 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 26/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 26 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 27/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 27 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 28/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 28 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 29/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 29 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 30/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 30 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 31/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 31 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 32/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 32 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 33/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 33 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 34/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 34 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 35/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 35 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 36/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 36 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 37/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 37 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 38/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 38 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 39/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 39 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 40/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 40 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 41/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 41 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 42/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 42 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 43/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 43 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 44/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 44 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 45/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 45 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 46/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 46 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 47/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 47 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 48/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 48 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 49/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 49 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 50/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 50 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 51/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 51 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 52/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 52 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 53/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 53 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 54/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 54 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 55/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 55 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 56/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 56 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 57/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 57 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 58/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 58 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 59/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 59 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 60/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 60 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 61/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 61 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 62/62 taranıyor... ---
+Sayfa 62 tarandı. Yeni eklenen (bu sayfada): 0
+
+Tarama tamamlandı!
+Yeni ihale bulunamadı.
+
+Tarayıcı kapatıldı.
+ihaleler.db değişmedi; commit atlanıyor.
+'ihaleler.db' veritabanı hazır.
+Veritabanında 31082 mevcut kayıt bulundu.
+Sayfa açılıyor...
+Sayfa başarıyla açıldı.
+
+--- Filtreler Uygulanıyor ---
+Alım Türleri seçildi: Hizmet, Mal, Danışmanlık, Yapım
+
+--- İhale Durumu Seçiliyor ---
+
+Ana 'Filtrele' butonuna basılıyor...
+Sonuçlar yüklendi.
+Sayfa başına 50 kayıt ile liste güncellendi.
+Toplam 62 sayfa bulundu (metin: '/ 62 Sayfa').
+
+--- Sayfa 1/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 1 tarandı. Yeni eklenen (bu sayfada): 16
+
+--- Sayfa 2/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 2 tarandı. Yeni eklenen (bu sayfada): 20
+
+--- Sayfa 3/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 3 tarandı. Yeni eklenen (bu sayfada): 13
+
+--- Sayfa 4/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 4 tarandı. Yeni eklenen (bu sayfada): 13
+
+--- Sayfa 5/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 5 tarandı. Yeni eklenen (bu sayfada): 11
+
+--- Sayfa 6/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 6 tarandı. Yeni eklenen (bu sayfada): 12
+
+--- Sayfa 7/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 7 tarandı. Yeni eklenen (bu sayfada): 15
+
+--- Sayfa 8/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 8 tarandı. Yeni eklenen (bu sayfada): 10
+
+--- Sayfa 9/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 9 tarandı. Yeni eklenen (bu sayfada): 9
+
+--- Sayfa 10/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 10 tarandı. Yeni eklenen (bu sayfada): 12
+
+--- Sayfa 11/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 11 tarandı. Yeni eklenen (bu sayfada): 9
+
+--- Sayfa 12/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 12 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 13/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 13 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 14/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 14 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 15/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 15 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 16/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 16 tarandı. Yeni eklenen (bu sayfada): 2
+
+--- Sayfa 17/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 17 tarandı. Yeni eklenen (bu sayfada): 3
+
+--- Sayfa 18/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 18 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 19/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 19 tarandı. Yeni eklenen (bu sayfada): 3
+
+--- Sayfa 20/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 20 tarandı. Yeni eklenen (bu sayfada): 4
+
+--- Sayfa 21/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 21 tarandı. Yeni eklenen (bu sayfada): 5
+
+--- Sayfa 22/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 22 tarandı. Yeni eklenen (bu sayfada): 5
+
+--- Sayfa 23/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 23 tarandı. Yeni eklenen (bu sayfada): 3
+
+--- Sayfa 24/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 24 tarandı. Yeni eklenen (bu sayfada): 3
+
+--- Sayfa 25/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 25 tarandı. Yeni eklenen (bu sayfada): 7
+
+--- Sayfa 26/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 26 tarandı. Yeni eklenen (bu sayfada): 7
+
+--- Sayfa 27/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 27 tarandı. Yeni eklenen (bu sayfada): 2
+
+--- Sayfa 28/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 28 tarandı. Yeni eklenen (bu sayfada): 5
+
+--- Sayfa 29/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 29 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 30/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 30 tarandı. Yeni eklenen (bu sayfada): 2
+
+--- Sayfa 31/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 31 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 32/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 32 tarandı. Yeni eklenen (bu sayfada): 4
+
+--- Sayfa 33/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 33 tarandı. Yeni eklenen (bu sayfada): 2
+
+--- Sayfa 34/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 34 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 35/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 35 tarandı. Yeni eklenen (bu sayfada): 2
+
+--- Sayfa 36/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 36 tarandı. Yeni eklenen (bu sayfada): 4
+
+--- Sayfa 37/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 37 tarandı. Yeni eklenen (bu sayfada): 9
+
+--- Sayfa 38/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 38 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 39/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 39 tarandı. Yeni eklenen (bu sayfada): 4
+
+--- Sayfa 40/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 40 tarandı. Yeni eklenen (bu sayfada): 2
+
+--- Sayfa 41/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 41 tarandı. Yeni eklenen (bu sayfada): 4
+
+--- Sayfa 42/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 42 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 43/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 43 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 44/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 44 tarandı. Yeni eklenen (bu sayfada): 4
+
+--- Sayfa 45/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 45 tarandı. Yeni eklenen (bu sayfada): 4
+
+--- Sayfa 46/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 46 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 47/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 47 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 48/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 48 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 49/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 49 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 50/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 50 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 51/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 51 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 52/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 52 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 53/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 53 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 54/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 54 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 55/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 55 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 56/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 56 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 57/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 57 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 58/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 58 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 59/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 59 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 60/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 60 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 61/62 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 61 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 62/62 taranıyor... ---
+Sayfa 62 tarandı. Yeni eklenen (bu sayfada): 1
+
+Tarama tamamlandı!
+DB satır sayısı: önce=31082, sonra=31321, eklenen=239
+Başarılı! 239 YENİ ihale veritabanına eklendi.
+
+Tarayıcı kapatıldı.
+[main f4e4624] Veritabanı güncellendi: 2026-02-23 18:02:07
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+git: 'credential-manager' is not a git command. See 'git --help'.
+fatal: could not read Username for 'https://github.com': No such device or address
+'ihaleler.db' veritabanı hazır.
+Veritabanında 31321 mevcut kayıt bulundu.
+Sayfa açılıyor...
+Sayfa başarıyla açıldı.
+
+--- Filtreler Uygulanıyor ---
+Alım Türleri seçildi: Hizmet, Mal, Danışmanlık, Yapım
+
+--- İhale Durumu Seçiliyor ---
+
+Ana 'Filtrele' butonuna basılıyor...
+Sonuçlar yüklendi.
+Sayfa başına 50 kayıt ile liste güncellendi.
+Toplam 63 sayfa bulundu (metin: '/ 63 Sayfa').
+
+--- Sayfa 1/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 1 tarandı. Yeni eklenen (bu sayfada): 11
+
+--- Sayfa 2/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 2 tarandı. Yeni eklenen (bu sayfada): 22
+
+--- Sayfa 3/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 3 tarandı. Yeni eklenen (bu sayfada): 14
+
+--- Sayfa 4/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 4 tarandı. Yeni eklenen (bu sayfada): 18
+
+--- Sayfa 5/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 5 tarandı. Yeni eklenen (bu sayfada): 13
+
+--- Sayfa 6/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 6 tarandı. Yeni eklenen (bu sayfada): 8
+
+--- Sayfa 7/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 7 tarandı. Yeni eklenen (bu sayfada): 12
+
+--- Sayfa 8/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 8 tarandı. Yeni eklenen (bu sayfada): 11
+
+--- Sayfa 9/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 9 tarandı. Yeni eklenen (bu sayfada): 9
+
+--- Sayfa 10/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 10 tarandı. Yeni eklenen (bu sayfada): 7
+
+--- Sayfa 11/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 11 tarandı. Yeni eklenen (bu sayfada): 0
+
+--- Sayfa 12/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 12 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 13/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 13 tarandı. Yeni eklenen (bu sayfada): 1
+
+--- Sayfa 14/63 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 14 tarandı. Yeni eklenen (bu sayfada): 2
+
+--- Sayfa 15/63 taranıyor... ---
+Zaman aşımı hatası: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div.pc-card") to be visible
+
+
+Tarayıcı kapatıldı.
+ihaleler.db değişmedi; commit atlanıyor.
+'ihaleler.db' veritabanı hazır.
+Veritabanında 31321 mevcut kayıt bulundu.
+Sayfa açılıyor...
+Sayfa başarıyla açıldı.
+
+--- Filtreler Uygulanıyor ---
+Alım Türleri seçildi: Hizmet, Mal, Danışmanlık, Yapım
+
+--- İhale Durumu Seçiliyor ---
+
+Ana 'Filtrele' butonuna basılıyor...
+Sonuçlar yüklendi.
+Sayfa başına 50 kayıt ile liste güncellendi.
+Toplam 65 sayfa bulundu (metin: '/ 65 Sayfa').
+
+--- Sayfa 1/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 1 tarandı. Yeni eklenen (bu sayfada): 19
+
+--- Sayfa 2/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 2 tarandı. Yeni eklenen (bu sayfada): 34
+
+--- Sayfa 3/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 3 tarandı. Yeni eklenen (bu sayfada): 29
+
+--- Sayfa 4/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 4 tarandı. Yeni eklenen (bu sayfada): 19
+
+--- Sayfa 5/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 5 tarandı. Yeni eklenen (bu sayfada): 22
+
+--- Sayfa 6/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 6 tarandı. Yeni eklenen (bu sayfada): 22
+
+--- Sayfa 7/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 7 tarandı. Yeni eklenen (bu sayfada): 14
+
+--- Sayfa 8/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 8 tarandı. Yeni eklenen (bu sayfada): 17
+
+--- Sayfa 9/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 9 tarandı. Yeni eklenen (bu sayfada): 24
+
+--- Sayfa 10/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 10 tarandı. Yeni eklenen (bu sayfada): 19
+
+--- Sayfa 11/65 taranıyor... ---
+Sonraki sayfaya geçiliyor...
+Sayfa 11 tarandı. Yeni eklenen (bu sayfada): 9
+
+--- Sayfa 12/65 taranıyor... ---
+Zaman aşımı hatası: Page.wait_for_selector: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("div.pc-card") to be visible
+
+
+Tarayıcı kapatıldı.
+ihaleler.db değişmedi; commit atlanıyor.
